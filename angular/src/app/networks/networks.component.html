@@ -9,8 +9,8 @@
       <app-network-details></app-network-details>
     </div>
   </div>
-  <button class="btn btn-primary btn-lg" (click)="showSecret = !showSecret">Dodaj nową sieć</button>
-    <p *ngIf="showSecret">
+  <button class="btn btn-primary btn-lg" (click)="showContent = !showContent">{{addNetworkBtn}}</button>
+    <p *ngIf="showContent">
         <span class="label label-info">Nazwa sieci</span>
         <input
           type="text"

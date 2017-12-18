@@ -23,7 +23,7 @@ import {AlertModule, CarouselModule} from 'ngx-bootstrap';
     NetworksComponent,
     NetworkListComponent,
     NetworkItemComponent,
-    NetworkDetailsComponent
+    NetworkDetailsComponent,
   ],
   imports: [
     BrowserModule,

@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {Subscription} from 'rxjs/Subscription';
 import {RestService} from '../../rest.service';
 import {Network} from '../../networks/network.model';
-import {ControlContainer} from '@angular/forms';
 
 @Component({
   selector: 'app-user',
@@ -22,7 +21,7 @@ export class UserComponent implements OnInit {
   serverCreationStatus = 'No server was createrd';
   time: Date = new Date();
   serverName = 'Default server name [two way data binding]';
-  showSecret: boolean;
+
   images: string[] = [
     'http://maxpixel.freegreatpicture.com/static/photo/1x/Neural-Network-Neural-Network-Science-Neuron-1487112.jpg',
     'http://www.publicdomainpictures.net/pictures/10000/velka/neural-networks-277512834557004puG.jpg',

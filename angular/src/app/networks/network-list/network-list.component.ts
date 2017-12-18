@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {Network} from '../network.model';
 
 @Component({
   selector: 'app-network-list',
   templateUrl: './network-list.component.html',
-  styleUrls: ['./network-list.component.css']
+  styleUrls: ['./network-list.component.css'],
 })
 export class NetworkListComponent implements OnInit {
   networks: Network[] = [

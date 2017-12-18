@@ -1,17 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {log} from 'util';
+import {Network} from './network.model';
 
 @Component({
   selector: 'app-networks',
   templateUrl: './networks.component.html',
-  styleUrls: ['./networks.component.css']
+  styleUrls: ['./networks.component.css'],
 })
 export class NetworksComponent implements OnInit {
   newName: string;
   newDescription: string;
   validateName: boolean;
   validateDescr: boolean;
+  status = false;
+  showContent: boolean;
+  addNetworkBtn: string = (!this.status) ? 'Dodaj nową sieć' : 'Anuluj';
   constructor() { }
+
+  @Input() addNewNetwork: Network;
 
   ngOnInit() {
   }
@@ -37,6 +43,8 @@ export class NetworksComponent implements OnInit {
     if (this.validateDescr || this.validateName)
     {
       log('new network added: [name] ' + this.newName + ' [descr] ' + this.newDescription );
+      this.addNewNetwork.name = this.newName;
+      this.addNewNetwork.description = this.newDescription;
     }
   }
 }
